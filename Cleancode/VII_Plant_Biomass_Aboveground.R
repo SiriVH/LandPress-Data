@@ -16,7 +16,6 @@ biomass <- read_xlsx('Data/VII_Biomass_aboveground.xlsx') %>%
                 ifelse(plot == '6.1.(?)', '6.1.', plot))),
          year = ifelse(site == 'LYG' & plot == '8.3.' & year == '2018' & dry_mass == '426.79', '2019', 
                        ifelse(site == 'BUO' & year == '2018', '2019', year)),
-         Drymass = as.numeric(dry_mass),
          year = as.factor(year),
          main_group = fct_recode(group, 'Dead' = 'Dead_Calluna', 
                                    'Dead' = 'Dead_graminoids',
