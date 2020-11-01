@@ -8,9 +8,9 @@ library(readxl)
 
 ######## IMPORT DATA #########
 
-plant.com.raw <- read_xlsx('Data/comdata.xlsx', sheet = 'Sheet1') # PLANT COMMUNITY DATA
+plant.com.raw <- read_xlsx('Data/plant_community.xlsx') # PLANT COMMUNITY DATA
 
-species.corr <- read_xlsx('Data/comdata.xlsx', sheet = 'Sheet2') # CORRECT NAMES
+species.corr <- read_xlsx('Data/taxa.xlsx') # CORRECT NAMES
 
 
 
@@ -88,9 +88,8 @@ community <- plant.com.raw %>%
            freq14,
            freq15,
            freq16) %>% 
-  summarise(cover = sum(as.numeric(cover, na.rm = TRUE)))
-
-
+  summarise(cover = sum(as.numeric(cover, na.rm = TRUE))) %>% 
+  filter(species != 'NA')
 
 ######## EXPORT DATA #########
 
