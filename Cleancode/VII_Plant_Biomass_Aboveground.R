@@ -29,19 +29,19 @@ biomass <- read_xlsx('Data/VII_Biomass_aboveground.xlsx') %>%
                                    #'Litter' = 'litter',
                                    'Litter' = 'mixed Litter', 
                                    #'Graminoids' = 'Graminoids_green',
-                                   'Wood' = 'Tree'),
-         life_group = fct_recode(group, 'dead' = 'Dead_Calluna', 
-                                 'dead' = 'Dead_graminoids', 
-                                 'dead' = 'Dead_stuck', 
-                                 'new' = 'Graminoids',
-                                 'new' = 'Forb', 
-                                 'standing' = 'Damaged_Calluna', 
-                                 'standing' = 'Calluna', 
-                                 'standing' = 'Ericales', 
-                                 'standing' = 'Fern', 
-                                 'dead' = 'Dead_Eriophorum', 
-                                 'Litter' = 'mixed Litter', 
-                                 'Wood' = 'Tree'))
+                                   'Wood' = 'Tree'))
+         # life_group = fct_recode(group, 'dead' = 'Dead_Calluna', 
+         #                         'dead' = 'Dead_graminoids', 
+         #                         'dead' = 'Dead_stuck', 
+         #                         'new' = 'Graminoids',
+         #                         'new' = 'Forb', 
+         #                         'standing' = 'Damaged_Calluna', 
+         #                         'standing' = 'Calluna', 
+         #                         'standing' = 'Ericales', 
+         #                         'standing' = 'Fern', 
+         #                         'dead' = 'Dead_Eriophorum', 
+         #                         'Litter' = 'mixed Litter', 
+         #                         'Wood' = 'Tree'))
 
 
 ######## EXPORT DATA #########
